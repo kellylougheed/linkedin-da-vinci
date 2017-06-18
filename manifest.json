@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "LinkedIn da Vinci",
-  "short_name": "LinkedIn da Vinci",
+  "short_name": "da Vinci",
   "description": "Replaces default LinkedIn company and school pictures with prettier versions",
   "author": "Kelly Lougheed",
   "version": "1.0",
