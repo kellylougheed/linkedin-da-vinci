@@ -2,25 +2,37 @@
 <html>
   <head>
     <title>LinkedIn Da Vinci</title>
-    <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
     <style>
       body {
         min-width: 250px;
         text-align: center;
       }
       h1 {
-        font-family: 'Playball', arial;
+        font-family: 'Sacramento', arial;
       }
       button {
-        background: #0066cc;
+        background: #99ccff;
         color: white;
         padding: 10px;
-        border-radius: 5px;
         border: none;
         letter-spacing: 1px;
+        width: 75px;
       }
-      button#stop {
-        background: #99ccff;
+      button:hover {
+        background: #0066cc;
+      }
+      #button {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        margin-right: -5px;
+      }
+      #stop {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .button-on {
+        background: #0066cc;
       }
     </style>
   </head>
@@ -28,11 +40,8 @@
   
     <h1>LinkedIn Da Vinci</h1>
 
-    <button id="button">Start da Vinci!</button>
-
-    <br/><br/>
-
-    <button id="stop">Stop da Vinci</button>
+    <button id="button" class="">ON</button>
+    <button id="stop" class="button-on">OFF</button>
 
     <script src="popup.js"></script>
 
