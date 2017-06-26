@@ -1,11 +1,21 @@
+var on = false;
+
 chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
     switch(request.type) {
         case "prettify":
             prettify();
+            on = true;
             break;
         case "stop":
             stop();
+            on = false;
             break;
+        case "status":
+            if (on === true) {
+                sendResponse({on: true});
+            } else {
+                sendResponse({on: false});
+            }
     }
     return true;
 });

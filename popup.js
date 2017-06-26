@@ -3,6 +3,13 @@ window.onload = function() {
   var button = document.getElementById("button");
   var stopButton = document.getElementById("stop");
 
+  chrome.extension.sendMessage({type: "status"}, function(response) {
+    if (response.on === true) {
+      button.classList.add("button-on");
+      stopButton.classList.remove("button-on");
+    }
+  });
+
   button.onclick = function() {
     chrome.extension.sendMessage({
       type: "prettify"
